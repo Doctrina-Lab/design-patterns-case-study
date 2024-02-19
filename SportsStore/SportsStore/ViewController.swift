@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var totalStockLabel: UILabel!
     
     var products = [
         ("Kayak", "A boat for one person", "Watersports", 275.0, 10),
@@ -22,9 +23,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        displayTotalStock()
     }
 
-
+    private func displayTotalStock() {
+        let totalStock = products.reduce(0) { $0 + $1.4 }
+        totalStockLabel.text = "\(totalStock) Products in Stock"
+    }
 }
 
