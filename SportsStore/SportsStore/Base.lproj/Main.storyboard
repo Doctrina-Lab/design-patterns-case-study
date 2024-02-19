@@ -29,6 +29,69 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-LJ-bHw">
                                 <rect key="frame" x="0.0" y="24" width="820" height="1096"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" rowHeight="145" id="W3u-Di-JP6" customClass="ProductTableCell" customModule="SportsStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="820" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3u-Di-JP6" id="uh5-Wg-7zJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="820" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-FM-6vm">
+                                                    <rect key="frame" x="700" y="20" width="100" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="0Sx-85-SZJ"/>
+                                                        <constraint firstAttribute="width" constant="100" id="YjH-tf-iO2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dSK-a1-92d">
+                                                    <rect key="frame" x="598" y="27" width="94" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="1TY-6d-uWU"/>
+                                                        <constraint firstAttribute="height" constant="32" id="XqK-cY-DYJ"/>
+                                                    </constraints>
+                                                </stepper>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhS-dc-Cnw">
+                                                    <rect key="frame" x="20" y="25" width="570" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-Me-jm7">
+                                                    <rect key="frame" x="20" y="74" width="780" height="51"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sVK-Me-jm7" firstAttribute="leading" secondItem="uh5-Wg-7zJ" secondAttribute="leading" constant="20" symbolic="YES" id="59k-wb-XsR"/>
+                                                <constraint firstItem="dSK-a1-92d" firstAttribute="centerY" secondItem="Oho-FM-6vm" secondAttribute="centerY" id="7oq-Xb-yae"/>
+                                                <constraint firstItem="sVK-Me-jm7" firstAttribute="top" secondItem="Oho-FM-6vm" secondAttribute="bottom" constant="8" symbolic="YES" id="Eoc-mQ-gYc"/>
+                                                <constraint firstAttribute="bottom" secondItem="sVK-Me-jm7" secondAttribute="bottom" constant="20" symbolic="YES" id="Gys-aN-kJ8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oho-FM-6vm" secondAttribute="trailing" constant="20" symbolic="YES" id="HOm-pA-HHb"/>
+                                                <constraint firstItem="qhS-dc-Cnw" firstAttribute="centerY" secondItem="Oho-FM-6vm" secondAttribute="centerY" id="U4O-a8-ie2"/>
+                                                <constraint firstItem="dSK-a1-92d" firstAttribute="leading" secondItem="qhS-dc-Cnw" secondAttribute="trailing" constant="8" symbolic="YES" id="Vy4-EV-WKa"/>
+                                                <constraint firstItem="Oho-FM-6vm" firstAttribute="leading" secondItem="dSK-a1-92d" secondAttribute="trailing" constant="8" symbolic="YES" id="eeo-Jv-EsS"/>
+                                                <constraint firstItem="Oho-FM-6vm" firstAttribute="top" secondItem="uh5-Wg-7zJ" secondAttribute="top" constant="20" symbolic="YES" id="kou-Vf-fmM"/>
+                                                <constraint firstAttribute="trailing" secondItem="sVK-Me-jm7" secondAttribute="trailing" constant="20" symbolic="YES" id="nEh-L4-uWr"/>
+                                                <constraint firstItem="qhS-dc-Cnw" firstAttribute="leading" secondItem="uh5-Wg-7zJ" secondAttribute="leading" constant="20" symbolic="YES" id="wIZ-20-AY7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="sVK-Me-jm7" id="qqM-MZ-PaG"/>
+                                            <outlet property="nameLabel" destination="qhS-dc-Cnw" id="3px-Th-7R6"/>
+                                            <outlet property="stockField" destination="Oho-FM-6vm" id="MUO-FY-JH4"/>
+                                            <outlet property="stockStepper" destination="dSK-a1-92d" id="Slt-KG-JSZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qqI-9p-heD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z2L-Nn-Roq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -44,12 +107,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Fpg-LJ-bHw" id="Nvw-cv-jy8"/>
                         <outlet property="totalStockLabel" destination="WLu-Xq-Bbx" id="335-qM-ePe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="9"/>
+            <point key="canvasLocation" x="86.341463414634148" y="8.6440677966101696"/>
         </scene>
     </scenes>
     <resources>

@@ -13,6 +13,7 @@
 		2E5610B12B835B7A00DCF15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5610AF2B835B7A00DCF15D /* Main.storyboard */; };
 		2E5610B32B835B7C00DCF15D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5610B22B835B7C00DCF15D /* Assets.xcassets */; };
 		2E5610B62B835B7C00DCF15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5610B42B835B7C00DCF15D /* LaunchScreen.storyboard */; };
+		2E5610BE2B8361B200DCF15D /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5610BD2B8361B200DCF15D /* ProductTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2E5610B22B835B7C00DCF15D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E5610B52B835B7C00DCF15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E5610B72B835B7C00DCF15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5610BD2B8361B200DCF15D /* ProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2E5610A92B835B7A00DCF15D /* AppDelegate.swift */,
 				2E5610AB2B835B7A00DCF15D /* SceneDelegate.swift */,
 				2E5610AD2B835B7A00DCF15D /* ViewController.swift */,
+				2E5610BD2B8361B200DCF15D /* ProductTableCell.swift */,
 				2E5610AF2B835B7A00DCF15D /* Main.storyboard */,
 				2E5610B22B835B7C00DCF15D /* Assets.xcassets */,
 				2E5610B42B835B7C00DCF15D /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				2E5610AE2B835B7A00DCF15D /* ViewController.swift in Sources */,
 				2E5610AA2B835B7A00DCF15D /* AppDelegate.swift in Sources */,
+				2E5610BE2B8361B200DCF15D /* ProductTableCell.swift in Sources */,
 				2E5610AC2B835B7A00DCF15D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

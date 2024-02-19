@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var totalStockLabel: UILabel!
     
     var products = [
@@ -32,3 +33,18 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let product = products[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableCell
+        cell.nameLabel.text = product.0
+        cell.descriptionLabel.text = product.1
+        cell.stockStepper.value = product.3
+        cell.stockField.text = "\(product.4)"
+        return cell
+    }
+}
