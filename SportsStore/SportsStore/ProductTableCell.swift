@@ -12,4 +12,10 @@ class ProductTableCell: UITableViewCell {
     @IBOutlet private(set) weak var descriptionLabel: UILabel!
     @IBOutlet private(set) weak var stockStepper: UIStepper!
     @IBOutlet private(set) weak var stockField: UITextField!
+    
+    var onStepperValueChanged: ((Double) -> Void)?
+    
+    @IBAction private func stepperValueChanged(_ sender: UIStepper) {
+        onStepperValueChanged?(sender.value)
+    }
 }
