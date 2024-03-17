@@ -1,6 +1,6 @@
 import Cocoa
 
-class Appointment {
+class Appointment: NSObject {
     var name: String
     var day: String
     var place: String
@@ -16,9 +16,15 @@ class Appointment {
     }
 }
 
+extension Appointment: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        Appointment(name: name, day: day, place: place)
+    }
+}
+
 var beerMeeting = Appointment(name: "Bob", day: "Mon", place: "Joe's Bar")
 
-var workMeeting = beerMeeting
+var workMeeting = beerMeeting.copy() as! Appointment
 workMeeting.name = "Alice"
 workMeeting.day = "Fri"
 workMeeting.place = "Conference Rm 2"
