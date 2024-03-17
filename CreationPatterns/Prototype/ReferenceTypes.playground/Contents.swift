@@ -1,12 +1,18 @@
 import Cocoa
 
-class Location {
+class Location: NSObject {
     var name: String
     var address: String
     
     init(name: String, address: String) {
         self.name = name
         self.address = address
+    }
+}
+
+extension Location: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        Location(name: name, address: address)
     }
 }
 
@@ -28,7 +34,7 @@ class Appointment: NSObject {
 
 extension Appointment: NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
-        Appointment(name: name, day: day, place: place)
+        Appointment(name: name, day: day, place: place.copy() as! Location)
     }
 }
 
