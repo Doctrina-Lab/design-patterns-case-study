@@ -1,18 +1,28 @@
 import Cocoa
 
+class Location {
+    var name: String
+    var address: String
+    
+    init(name: String, address: String) {
+        self.name = name
+        self.address = address
+    }
+}
+
 class Appointment: NSObject {
     var name: String
     var day: String
-    var place: String
+    var place: Location
     
-    init(name: String, day: String, place: String) {
+    init(name: String, day: String, place: Location) {
         self.name = name
         self.day = day
         self.place = place
     }
     
     func printDetails(label: String) {
-        print("\(label) with \(name) on \(day) at \(place)")
+        print("\(label) with \(name) on \(day) at \(place.name), \(place.address)")
     }
 }
 
@@ -22,12 +32,13 @@ extension Appointment: NSCopying {
     }
 }
 
-var beerMeeting = Appointment(name: "Bob", day: "Mon", place: "Joe's Bar")
+var beerMeeting = Appointment(name: "Bob", day: "Mon", place: Location(name: "Joe's Bar", address: "123 Main St"))
 
 var workMeeting = beerMeeting.copy() as! Appointment
 workMeeting.name = "Alice"
 workMeeting.day = "Fri"
-workMeeting.place = "Conference Rm 2"
+workMeeting.place.name = "Conference Rm 2"
+workMeeting.place.address = "Compay HQ"
 
 beerMeeting.printDetails(label: "Social")
 workMeeting.printDetails(label: "Work")
